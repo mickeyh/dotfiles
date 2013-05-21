@@ -1,0 +1,6 @@
+gtk-theme-name = "MediterraneanNight"
+
+style "vimfix" {
+   bg[NORMAL] = "#3f3f3f" # Matches Zenburn original (light) background.
+}
+widget "vim-main-window.*GtkForm" style "vimfix"

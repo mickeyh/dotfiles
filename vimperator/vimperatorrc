@@ -1,0 +1,12 @@
+" vimperatorrc borrowing from anxrc's.
+
+" Only tabs displayed.
+set toolbars=noaddons,nobookmarks,nomenu,nonavigation,tabs
+" Statusline.
+set status=input,location,tabcount,position
+" Search engine.
+set defsearch=duckduckgo
+" Number tabs for easy switching.
+set tabnumbers
+
+" vim: set ft=vimperator:
