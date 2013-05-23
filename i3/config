@@ -19,7 +19,7 @@ font pango:DejaVu Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -186,12 +186,12 @@ client.urgent           #3f3f3f #cc9393 #dcdccc #3f3f3f
 client.background       #3f3f3f
 
 # Bind workspaces to left/right monitors.
-workspace 1 output eDP1
-workspace 2 output eDP1
-workspace 3 output eDP1
-workspace 8 output VGA1
-workspace 9 output VGA1
-workspace 10 output VGA1
+#workspace 1 output eDP1
+#workspace 2 output eDP1
+#workspace 3 output eDP1
+#workspace 8 output VGA1
+#workspace 9 output VGA1
+#workspace 10 output VGA1
 
 # Lock screen with slock.
 bindsym $mod+Shift+semicolon exec slock
