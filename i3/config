@@ -195,6 +195,8 @@ bindsym $mod+Shift+semicolon exec slock
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+B exec chromium
 
+# TODO: Bind other applications.
+
 # Vim-like marks. Only allow single character marks.
 bindsym $mod+m exec i3-input -F'mark "%s"' -P 'Mark name: ' -l2
 bindsym $mod+apostrophe exec i3-input -F'[con_mark="%s"] focus' -P'Go to mark: ' -l2
