@@ -1,3 +1,4 @@
+# TODO: Substitute your network interfaces for wlan0/eth0.
 general {
    colors = true
    color_good = "#7f9f7f"
