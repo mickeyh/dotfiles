@@ -75,7 +75,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindcode $mod+c focus child
+bindsym $mod+c focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -115,46 +115,46 @@ bindsym $mod+minus scratchpad show
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+   # These bindings trigger as soon as you enter the resize mode
 
-        # They resize the border in the direction you pressed, e.g.
-        # when pressing left, the window is resized so that it has
-        # more space on its left
+   # They resize the border in the direction you pressed, e.g.
+   # when pressing left, the window is resized so that it has
+   # more space on its left
 
-bindsym h resize shrink left 10 px or 10 ppt
-bindsym Shift+H resize grow   left 10 px or 10 ppt
+   bindsym h resize shrink left 10 px or 10 ppt
+   bindsym Shift+H resize grow   left 10 px or 10 ppt
 
-bindsym j resize shrink down 10 px or 10 ppt
-bindsym Shift+J resize grow   down 10 px or 10 ppt
+   bindsym j resize shrink down 10 px or 10 ppt
+   bindsym Shift+J resize grow   down 10 px or 10 ppt
 
-bindsym k resize shrink up 10 px or 10 ppt
-bindsym Shift+K resize grow   up 10 px or 10 ppt
+   bindsym k resize shrink up 10 px or 10 ppt
+   bindsym Shift+K resize grow   up 10 px or 10 ppt
 
-bindsym l resize shrink right 10 px or 10 ppt
-bindsym Shift+L resize grow   right 10 px or 10 ppt
+   bindsym l resize shrink right 10 px or 10 ppt
+   bindsym Shift+L resize grow   right 10 px or 10 ppt
 
-        # shme bindings, but for the arrow keys
-bindsym Left resize shrink left 10 px or 10 ppt
-bindsym Shift+Left resize grow   left 10 px or 10 ppt
+   # shme bindings, but for the arrow keys
+   bindsym Left resize shrink left 10 px or 10 ppt
+   bindsym Shift+Left resize grow   left 10 px or 10 ppt
 
-bindsym Down resize shrink down 10 px or 10 ppt
-bindsym Shift+Down resize grow   down 10 px or 10 ppt
+   bindsym Down resize shrink down 10 px or 10 ppt
+   bindsym Shift+Down resize grow   down 10 px or 10 ppt
 
-bindsym Up resize shrink up 10 px or 10 ppt
-bindsym Shift+Up resize grow   up 10 px or 10 ppt
+   bindsym Up resize shrink up 10 px or 10 ppt
+   bindsym Shift+Up resize grow   up 10 px or 10 ppt
 
-bindsym Right resize shrink right 10 px or 10 ppt
-bindsym Shift+Right resize grow   right 10 px or 10 ppt
+   bindsym Right resize shrink right 10 px or 10 ppt
+   bindsym Shift+Right resize grow   right 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-bindsym Return mode "default"
-bindsym Escape mode "default"
+   # back to normal: Enter or Escape
+   bindsym Return mode "default"
+   bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
 # New window border style.
-new_window pixel 2
+new_window pixel 3
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -186,18 +186,14 @@ client.urgent           #3f3f3f #cc9393 #dcdccc #3f3f3f
 client.background       #3f3f3f
 
 # Bind workspaces to left/right monitors.
-#workspace 1 output eDP1
-#workspace 2 output eDP1
-#workspace 3 output eDP1
-#workspace 8 output VGA1
-#workspace 9 output VGA1
-#workspace 10 output VGA1
+# TODO: Bind monitors. For example with `workspace 1 output eDP1`
 
 # Lock screen with slock.
 bindsym $mod+Shift+semicolon exec slock
 
 # Start a web browser.
 bindsym $mod+b exec firefox
+bindsym $mod+Shift+B exec chromium
 
 # Vim-like marks. Only allow single character marks.
 bindsym $mod+m exec i3-input -F'mark "%s"' -P 'Mark name: ' -l2
@@ -206,4 +202,4 @@ bindsym $mod+apostrophe exec i3-input -F'[con_mark="%s"] focus' -P'Go to mark: '
 # Start wicd network manager in tray.
 #exec --no-startup-id wicd-client --tray
 # Set up wallpaper.
-exec --no-startup-id feh --bg-fill ~/Desktop/wallpapers/Stormcloud_Schmeisser.png
+exec --no-startup-id feh --bg-fill ~/.wallpaper
