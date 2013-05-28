@@ -311,6 +311,10 @@ mode "set_mark" {
    bindsym $mod+Shift+X mark "X"; mode "default"
    bindsym $mod+Shift+Y mark "Y"; mode "default"
    bindsym $mod+Shift+Z mark "Z"; mode "default"
+
+   bindsym Return mode "default"
+   bindsym Escape mode "default"
+   bindsym Control+bracketleft mode "default"
 }
 bindsym $mod+m mode "set_mark"
 
@@ -419,5 +423,9 @@ mode "find_mark" {
    bindsym $mod+Shift+X [con_mark="X"] focus; mode "default"
    bindsym $mod+Shift+Y [con_mark="Y"] focus; mode "default"
    bindsym $mod+Shift+Z [con_mark="Z"] focus; mode "default"
+
+   bindsym Return mode "default"
+   bindsym Escape mode "default"
+   bindsym Control+bracketleft mode "default"
 }
 bindsym $mod+apostrophe mode "find_mark"
