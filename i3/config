@@ -424,6 +424,18 @@ mode "find_mark" {
    bindsym $mod+Shift+Y [con_mark="Y"] focus; mode "default"
    bindsym $mod+Shift+Z [con_mark="Z"] focus; mode "default"
 
+   # Allow workspace keys to work in findmark mode.
+   bindsym 1 workspace 1; mode "default"
+   bindsym 2 workspace 2; mode "default"
+   bindsym 3 workspace 3; mode "default"
+   bindsym 4 workspace 4; mode "default"
+   bindsym 5 workspace 5; mode "default"
+   bindsym 6 workspace 6; mode "default"
+   bindsym 7 workspace 7; mode "default"
+   bindsym 8 workspace 8; mode "default"
+   bindsym 9 workspace 9; mode "default"
+   bindsym 0 workspace 10; mode "default"
+
    bindsym Return mode "default"
    bindsym Escape mode "default"
    bindsym Control+bracketleft mode "default"
