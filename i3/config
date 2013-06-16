@@ -180,7 +180,7 @@ bar {
 }
 # class                 border  backgrd text    indicator
 client.focused          #272727 #1e2320 #f0dfaf #606060
-client.focused_inactive #272727 #272727 #dcdccc #555555
+client.focused_inactive #393939 #393939 #dcdccc #555555
 client.unfocused        #393939 #393939 #dcdccc #3f3f3f
 client.urgent           #3f3f3f #cc9393 #dcdccc #3f3f3f
 client.background       #3f3f3f
