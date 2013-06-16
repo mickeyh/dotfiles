@@ -25,7 +25,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher) using Zenburn colors.
-bindsym $mod+d exec dmenu_run -nb '#3f3f3f' -sb '#2f2f2f' -nf '#dcdccc' -sf '#80d4aa'
+bindsym $mod+d exec dmenu_run -nb '#2f2f2f' -sb '#242424' -nf '#dcdccc' -sf '#80d4aa'
 
 # change focus
 bindsym $mod+h focus left
