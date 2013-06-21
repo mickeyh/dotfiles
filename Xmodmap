@@ -1,11 +1,13 @@
-! Exchange left Alt and left Win
-remove mod1 = Alt_L
-remove mod1 = Alt_R
-remove mod1 = Meta_L
-remove mod4 = Super_L
-remove mod4 = Super_R
-add mod1 = Super_L
-add mod1 = Super_R
-add mod4 = Alt_L
-add mod4 = Alt_R
-add mod4 = Meta_L
+clear Lock
+clear mod1
+clear mod4
+
+! Left Windows key.
+keycode 133 = Mode_switch Caps_Lock Mode_switch Caps_Lock
+! Capslock key.
+keycode 66 = Super_L NoSymbol Super_L
+
+add mod1 = Alt_L
+add mod1 = Alt_R
+add mod4 = Super_L
+add mod4 = Super_R
