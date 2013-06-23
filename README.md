@@ -6,3 +6,10 @@ After cloning you may want to:
    3. Change wlan0/eth0 in `i3/i3status_config` to your network interfaces.
    3. Symlink your favorite wallpaper to `~/.wallpaper`.
    4. Install the MediterraneanNight gtk theme. This may include symlinking MediterraneanNight's `gtk-3.0` folder to your `$XDG_CONFIG_HOME` directory (`~/.config` by default).
+
+Finally you man want to install (unless you change the corresponding configuration file):
+   1. dmenu (`i3/config`)
+   2. feh (`i3/config`)
+   3. firefox (`i3/config`)
+   4. slock (`i3/config`)
+   5. chromium (`i3/config`)
