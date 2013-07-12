@@ -13,6 +13,7 @@ rm -rfi ~/.i3
 rm -rfi ~/.vimperator
 rm -i ~/.vimperatorrc
 rm -i ~/.xinitrc
+rm -i ~/.zshrc
 
 # Make symlinks.
 ln -s $DOTFILESDIR/Xdefaults ~/.Xdefaults
@@ -22,3 +23,4 @@ ln -s $DOTFILESDIR/i3 ~/.i3
 ln -s $DOTFILESDIR/vimperator ~/.vimperator
 ln -s $DOTFILESDIR/vimperator/vimperatorrc ~/.vimperatorrc
 ln -s $DOTFILESDIR/xinitrc ~/.xinitrc
+ln -s $DOTFILESDIR/zshrc ~/.zshrc

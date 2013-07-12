@@ -13,3 +13,4 @@ Finally you man want to install (unless you change the corresponding configurati
    3. firefox (`i3/config`)
    4. slock (`i3/config`)
    5. chromium (`i3/config`)
+   6. oh-my-zsh (`zshrc`)
