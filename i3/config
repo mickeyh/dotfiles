@@ -192,8 +192,8 @@ client.background       #3f3f3f
 bindsym $mod+Shift+semicolon exec slock
 
 # Start a web browser.
-bindsym $mod+b exec firefox
-bindsym $mod+Shift+B exec chromium
+bindsym $mod+b exec firefox --private-window
+bindsym $mod+Shift+B exec chromium --incognito
 
 # TODO: Bind other applications.
 
