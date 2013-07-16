@@ -44,9 +44,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls="ls --color=auto --human-readable --group-directories-first"
 
-# Suffix aliases.
-alias -s {cnf,conf,py,rb,txt,yaml}=gvim
-
 #-------------------------------------------------------------------------------
 #  Environment.
 #-------------------------------------------------------------------------------
