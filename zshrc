@@ -58,7 +58,7 @@ export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclu
 # Force file completion with ^F.
 zle -C complete-file complete-word _generic
 zstyle ':completion:complete-file::::' completer _files
-bindkey '^F' complete-file
+bindkey '^[[Z' complete-file
 
 # The following lines were added by compinstall
 
@@ -128,6 +128,7 @@ setopt \
 # Completion.
 setopt \
    AUTO_PARAM_SLASH \
+   NO_AUTO_MENU \
    NO_AUTO_REMOVE_SLASH \
    NO_LIST_AMBIGUOUS \
    LIST_PACKED \
@@ -169,3 +170,6 @@ bindkey '^S' history-incremental-pattern-search-forward
 # iPython-ish ^P and ^N.
 bindkey '^P' my-local-history-beginning-search-backward
 bindkey '^N' my-local-history-beginning-search-forward
+
+# Bash-like ^U.
+bindkey '^U' backward-kill-line
