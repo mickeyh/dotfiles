@@ -1,3 +1,6 @@
+#-------------------------------------------------------------------------------
+#  oh-my-zsh Boilerplate. {{{1
+#-------------------------------------------------------------------------------
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -39,20 +42,21 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 #-------------------------------------------------------------------------------
-#  Aliases.
+#  Aliases. {{{1
 #-------------------------------------------------------------------------------
 
 alias ls="ls --color=auto --human-readable --group-directories-first"
+alias cd=git-cd
 
 #-------------------------------------------------------------------------------
-#  Environment.
+#  Environment. {{{1
 #-------------------------------------------------------------------------------
 
 export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
 export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclude-dir=".git" --exclude-dir=".hg" --exclude-dir=".svn"'
 
 #-------------------------------------------------------------------------------
-#  Completion.
+#  Completion. {{{1
 #-------------------------------------------------------------------------------
 
 # Force file completion with ^F.
@@ -89,8 +93,25 @@ compinit
 # End of lines added by compinstall
 
 #-------------------------------------------------------------------------------
-#  Regular widgets.
+#  Regular widgets and functions. {{{1
 #-------------------------------------------------------------------------------
+
+# cd to (in order of preference): git project root, parent git project root, ~.
+function git-cd () {
+   if [[ $# -ne 0 ]]; then
+      builtin cd "$@"
+   else
+      local SHOULD_GIT_CD
+      SHOULD_GIT_CD="$(cd ..; git rev-parse --is-inside-work-tree 2> /dev/null)"
+      if [[ "$SHOULD_GIT_CD" = "true" ]]; then
+         local CD_CMD
+         CD_CMD="$(cd ..; git rev-parse --show-cdup 2> /dev/null)"
+         builtin cd ../"$CD_CMD"
+      else
+         builtin cd
+      fi
+   fi
+}
 
 function my-local-history-beginning-search-backward () {
    zle set-local-history 1
@@ -107,7 +128,7 @@ function my-local-history-beginning-search-forward () {
 zle -N my-local-history-beginning-search-forward
 
 #-------------------------------------------------------------------------------
-#  History settings.
+#  History settings. {{{1
 #-------------------------------------------------------------------------------
 
 HISTFILE=$HOME/.histfile
@@ -116,7 +137,7 @@ HISTSIZE=4096
 SAVEHIST=$HISTSIZE
 
 #-------------------------------------------------------------------------------
-# Options.
+# Options. {{{1
 #-------------------------------------------------------------------------------
 
 # Changing directories.
@@ -152,13 +173,13 @@ setopt \
    NO_BEEP \
 
 #-------------------------------------------------------------------------------
-#  Prompt.
+#  Prompt. {{{1
 #-------------------------------------------------------------------------------
 
 zstyle ':vcs_info:*:*' check-for-changes false # Avoid lag on big repos.
 
 #-------------------------------------------------------------------------------
-#  ZLE behaviour.
+#  ZLE behaviour. {{{1
 #-------------------------------------------------------------------------------
 
 bindkey -e
@@ -173,3 +194,5 @@ bindkey '^N' my-local-history-beginning-search-forward
 
 # Bash-like ^U.
 bindkey '^U' backward-kill-line
+
+# vim: set ft=zsh ts=3 sw=3 et foldmethod=marker :
