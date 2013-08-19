@@ -193,7 +193,7 @@ bindsym $mod+Shift+semicolon exec slock
 
 # Start a web browser.
 bindsym $mod+b exec firefox --private-window
-bindsym $mod+Shift+B exec chromium --incognito
+bindsym $mod+Shift+B exec chromium
 
 # TODO: Bind other applications.
 
