@@ -52,6 +52,8 @@ alias cd=git-cd
 #  Environment. {{{1
 #-------------------------------------------------------------------------------
 
+source /etc/profile
+
 export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
 export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclude-dir=".git" --exclude-dir=".hg" --exclude-dir=".svn"'
 
