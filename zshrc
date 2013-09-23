@@ -61,6 +61,9 @@ export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclu
 #  Completion. {{{1
 #-------------------------------------------------------------------------------
 
+# fasd hook.
+eval "$(fasd --init auto)"
+
 # Force file completion with ^F.
 zle -C complete-file complete-word _generic
 zstyle ':completion:complete-file::::' completer _files
