@@ -45,8 +45,9 @@ source $ZSH/oh-my-zsh.sh
 #  Aliases. {{{1
 #-------------------------------------------------------------------------------
 
-alias ls="ls --color=auto --human-readable --group-directories-first"
 alias cd=git-cd
+alias ls="ls --color=auto --human-readable --group-directories-first"
+alias vless="/usr/share/vim/vim74/macros/less.sh"
 
 #-------------------------------------------------------------------------------
 #  Environment. {{{1
