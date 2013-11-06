@@ -12,5 +12,8 @@ if [ -s ~/.Xmodmap ]; then
    xmodmap ~/.Xmodmap
 fi
 
+# Start ssh-agent with default key lifetime of 4 hours.
+eval $(ssh-agent -t 14400)
+
 # Execute window manager.
 exec i3
