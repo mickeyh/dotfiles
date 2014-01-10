@@ -16,4 +16,4 @@ fi
 eval $(ssh-agent -t 14400)
 
 # Execute window manager.
-exec i3
+dbus-launch --exit-with-session --sh-syntax i3
