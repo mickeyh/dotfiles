@@ -198,6 +198,9 @@ bindsym $mod+Shift+B exec chromium
 # Mail client hotkeys.
 bindsym $mod+Shift+N exec thunderbird
 
+# Open todo list.
+bindsym $mod+t exec gvim -O ~/notes/todo_extended.txt ~/notes/todo.tx
+
 # TODO: Bind other applications.
 
 # Start wicd network manager in tray.
