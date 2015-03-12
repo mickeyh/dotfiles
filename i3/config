@@ -12,14 +12,13 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono 10
+font pango:Adobe Source Code Pro 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -159,12 +158,8 @@ new_window pixel 2
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-   # Put bar at top.
-   #position top
    # Hide status bar unless modifier key is pressed.
-   #mode hide
-   # Don't show tray icons.
-   #tray_output none
+   mode hide
    status_command i3status --config ~/.i3/i3status_config
 
    colors {
@@ -203,8 +198,6 @@ bindsym $mod+t exec gvim -O ~/notes/todo_extended.txt ~/notes/todo.txt
 
 # TODO: Bind other applications.
 
-# Start wicd network manager in tray.
-#exec --no-startup-id wicd-client --tray
 # Set up wallpaper.
 exec --no-startup-id feh --bg-fill ~/.wallpaper
 

@@ -12,8 +12,10 @@ if [ -s ~/.Xmodmap ]; then
    xmodmap ~/.Xmodmap
 fi
 
-# Start ssh-agent with default key lifetime of 4 hours.
-eval $(ssh-agent -t 14400)
+# Start GNOME Keyring.
+eval $(/usr/bin/gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
+
 
 # Execute window manager.
 dbus-launch --exit-with-session --sh-syntax i3

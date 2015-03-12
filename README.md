@@ -8,12 +8,16 @@ After cloning you may want to:
    4. Install the MediterraneanNight gtk theme. This may include symlinking MediterraneanNight's `gtk-3.0` folder to the `$XDG_CONFIG_HOME/gtk-3.0` directory (`~/.config/gtk-3.0` by default).
 
 Finally you man want to install (unless you change the corresponding configuration file):
-   1. dmenu (`i3/config`)
-   2. feh (`i3/config`)
-   3. firefox (`i3/config`)
-   4. slock (`i3/config`)
-   5. chromium (`i3/config`)
-   6. fasd (`zshrc`)
-   7. oh-my-zsh (`zshrc`)
-   8. urxvt (`zshrc`)
-   9. xmodmap (`Xmodmap`)
+   1. chromium (`i3/config`).
+   1. gnome-keyring (`xinitrc`).
+   1. adobe-source-code-pro-fonts (`i3/config`).
+   1. dmenu (`i3/config`).
+   1. fasd (`zshrc`).
+   1. feh (`i3/config`).
+   1. firefox (`i3/config`).
+   1. i3status (`i3/config`).
+   1. i3-wm (`i3/config`).
+   1. oh-my-zsh (`zshrc`).
+   1. slock (`i3/config`).
+   1. terminator (`i3/config`).
+   1. xmodmap (`Xmodmap`).
