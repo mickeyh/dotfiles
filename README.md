@@ -15,6 +15,8 @@ Finally you man want to install (unless you change the corresponding configurati
    1. fasd (`zshrc`).
    1. feh (`i3/config`).
    1. firefox (`i3/config`).
+      1. vimperator.
+      1. startpage.
    1. i3status (`i3/config`).
    1. i3-wm (`i3/config`).
    1. oh-my-zsh (`zshrc`).
