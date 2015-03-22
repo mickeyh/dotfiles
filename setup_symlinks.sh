@@ -14,6 +14,7 @@ rm -rfi ~/.vimperator
 rm -i ~/.vimperatorrc
 rm -i ~/.xinitrc
 rm -i ~/.zshrc
+rm -i ~/.config/terminator/config
 
 # Make symlinks.
 ln -s $DOTFILESDIR/Xdefaults ~/.Xdefaults
@@ -24,3 +25,5 @@ ln -s $DOTFILESDIR/vimperator ~/.vimperator
 ln -s $DOTFILESDIR/vimperator/vimperatorrc ~/.vimperatorrc
 ln -s $DOTFILESDIR/xinitrc ~/.xinitrc
 ln -s $DOTFILESDIR/zshrc ~/.zshrc
+mkdir -p ~/.config/terminator
+ln -s $DOTFILESDIR/terminator_config ~/.config/terminator/config
