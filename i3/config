@@ -197,7 +197,7 @@ bindsym $mod+Shift+semicolon exec slock
 
 # Web browser hotkeys.
 bindsym $mod+b exec firefox --private-window
-bindsym $mod+Shift+B exec chromium
+bindsym $mod+Shift+B exec opera
 
 # Mail client hotkeys.
 bindsym $mod+Shift+N exec thunderbird
