@@ -28,7 +28,8 @@ map f LinkHints.activateMode
 map F linkHints.activateModeToOpenInNewTab
 map <a-f> LinkHints.activateModeWithQueue
 map o Vomnibar.activate
-map O Vomnibar.activateInNewTab
+#map O Vomnibar.activateInNewTab
+map O Vomnibar.activateEditUrl
 map b Vomnibar.activateTabSelection
 map a Vomnibar.activateBookmarks
 map A Vomnibar.activateBookmarksInNewTab
@@ -59,5 +60,7 @@ map g0 firstTab
 map g$ lastTab
 map t createTab
 map T duplicateTab
+map ;b LinkHints.activateModeToOpenInNewTab
+map ;t LinkHints.activateModeToOpenInNewForegroundTab
 map d removeTab
 map u restoreTab
