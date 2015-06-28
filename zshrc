@@ -63,6 +63,12 @@ export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
 export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclude-dir=".git" --exclude-dir=".hg" --exclude-dir=".svn"'
 export PATH=$HOME/.cabal/bin:$PATH
 
+export GOPATH=$HOME/go
+export PATH=$HOME/go/bin:$PATH
+
+export BROWSER=opera
+export EDITOR=vim
+
 #-------------------------------------------------------------------------------
 #  Completion. {{{1
 #-------------------------------------------------------------------------------

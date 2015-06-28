@@ -16,6 +16,5 @@ fi
 eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
-
 # Execute window manager.
 dbus-launch --exit-with-session --sh-syntax i3
