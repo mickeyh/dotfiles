@@ -42,16 +42,54 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 #-------------------------------------------------------------------------------
+#  Environment. {{{1
+#-------------------------------------------------------------------------------
+
+source /etc/profile
+
+export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
+export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclude-dir=".git" --exclude-dir=".hg" --exclude-dir=".svn"'
+export PATH=$HOME/.cabal/bin:$PATH
+
+# Homebrew.
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$PATH"
+# Macports.
+export PATH=/opt/local/bin:$PATH
+export PATH=/opt/local/sbin:$PATH
+# PosgreSQL from Macports. WHY DO I HAVE TO PUT THIS HERE.
+export PATH=/opt/local/lib/postgresql93/bin:$PATH
+# Java.
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/"
+# My scripts.
+export PATH=/Users/mgh/bin:$PATH
+# Added by Anaconda 2.1.0 installer.
+export PATH="$HOME/anaconda/bin:$PATH"
+# Haskell
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+# Go.
+export GOPATH=~/go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+#-------------------------------------------------------------------------------
 #  Aliases. {{{1
 #-------------------------------------------------------------------------------
 
 alias cd=git-cd
+alias p2env=make_clean_py2_virtualenv
+alias p3env=make_clean_py3_virtualenv
+alias lpenv=source_py_virtualenv
 alias ls="ls --color=auto --human-readable --group-directories-first"
 alias vless="/usr/share/vim/vim74/macros/less.sh"
 
 alias ghc-sandbox="ghc -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
 alias ghci-sandbox="ghci -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
 alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
+
+# Docker
+alias dockercleancontainers="docker ps -a --no-trunc| grep 'Exit' | awk '{print \$1}' | xargs -L 1 docker rm"
+alias dockercleanimages="docker images -a --no-trunc | grep none | awk '{print \$3}' | xargs -L 1 docker rmi"
+alias dockerclean="dockercleancontainers && dockercleanimages"
+
 
 #-------------------------------------------------------------------------------
 #  Environment. {{{1
@@ -60,9 +98,12 @@ alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sand
 source /etc/profile
 source /usr/bin/virtualenvwrapper.sh
 
-export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
-export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclude-dir=".git" --exclude-dir=".hg" --exclude-dir=".svn"'
-export PATH=$HOME/.cabal/bin:$PATH
+# TODO.txt
+alias t="todo.sh"
+alias ta="todo.sh add"
+alias td="todo.sh do"
+alias tl="todo.sh list"
+alias tla="todo.sh listall"
 
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
@@ -76,6 +117,9 @@ export EDITOR=vim
 
 # fasd hook.
 eval "$(fasd --init auto)"
+
+# fasd gvim.
+alias v="fasd -f -e gvim"
 
 # Force file completion with ^F.
 zle -C complete-file complete-word _generic
@@ -129,6 +173,42 @@ function git-cd () {
          builtin cd
       fi
    fi
+}
+
+function make_clean_py2_virtualenv () {
+   if [[ $# -ne 1 ]]; then
+      echo "make_clean_virtualenv takes exactly one argument."
+   fi
+
+   if hash deactivate 2>/dev/null; then
+      deactivate
+   fi
+
+   rm -rf "$HOME/py_envs/$1"
+   virtualenv --python=$(which python2) "$HOME/py_envs/$1"
+   source "$HOME/py_envs/$1/bin/activate"
+}
+
+function make_clean_py3_virtualenv () {
+   if [[ $# -ne 1 ]]; then
+      echo "make_clean_virtualenv takes exactly one argument."
+   fi
+
+   if hash deactivate 2>/dev/null; then
+      deactivate
+   fi
+
+   rm -rf "$HOME/py_envs/$1"
+   virtualenv --python=$(which python3) "$HOME/py_envs/$1"
+   source "$HOME/py_envs/$1/bin/activate"
+}
+
+function source_py_virtualenv () {
+   if [[ $# -ne 1 ]]; then
+      echo "source_py_virtualenv takes exactly one argument."
+   fi
+
+   source $HOME/py_envs/$1/bin/activate
 }
 
 function my-local-history-beginning-search-backward () {
@@ -216,3 +296,11 @@ bindkey '^N' my-local-history-beginning-search-forward
 bindkey '^U' backward-kill-line
 
 # vim: set ft=zsh ts=3 sw=3 et foldmethod=marker :
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+source "/Users/mgh/google-cloud-sdk/path.zsh.inc"
+source "/Users/mgh/google-cloud-sdk/completion.zsh.inc"
+
+PERL_MB_OPT="--install_base \"/Users/mgh/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/mgh/perl5"; export PERL_MM_OPT;
