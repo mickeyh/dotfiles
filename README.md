@@ -23,3 +23,4 @@ Finally you man want to install (unless you change the corresponding configurati
    1. slock (`i3/config`).
    1. terminator (`i3/config`).
    1. xmodmap (`Xmodmap`).
+   1. python-virtualenvwrapper (`zshrc`).
