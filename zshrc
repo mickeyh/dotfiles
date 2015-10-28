@@ -68,6 +68,7 @@ export PATH="$HOME/anaconda/bin:$PATH"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 # Go.
 export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 #-------------------------------------------------------------------------------
@@ -78,7 +79,7 @@ alias cd=git-cd
 alias p2env=make_clean_py2_virtualenv
 alias p3env=make_clean_py3_virtualenv
 alias lpenv=source_py_virtualenv
-alias ls="ls --color=auto --human-readable --group-directories-first"
+alias ldenv=load_docker_env
 alias vless="/usr/share/vim/vim74/macros/less.sh"
 
 alias ghc-sandbox="ghc -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
@@ -99,11 +100,18 @@ source /etc/profile
 source /usr/bin/virtualenvwrapper.sh
 
 # TODO.txt
-alias t="todo.sh"
-alias ta="todo.sh add"
-alias td="todo.sh do"
-alias tl="todo.sh list"
-alias tla="todo.sh listall"
+alias t="topydo"
+alias ta="topydo add"
+alias tap="topydo append"
+alias td=topydo_do_tag_time
+#alias td="topydo do"
+alias tl="topydo ls"
+alias tlc="topydo listcon"
+alias tlp="topydo listprojects"
+alias tlt="topydo ls +today"
+alias tp="topydo pri"
+alias ts="topydo sort"
+alias tt="topydo tag"
 
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
@@ -175,6 +183,15 @@ function git-cd () {
    fi
 }
 
+function topydo_do_tag_time () {
+   if [[ $# -ne 2 ]]; then
+      echo "topydo_do_tag_time takes exactly two argument."
+  else
+       topydo tag "$1" time $2
+       topydo do "$1"
+   fi
+}
+
 function make_clean_py2_virtualenv () {
    if [[ $# -ne 1 ]]; then
       echo "make_clean_virtualenv takes exactly one argument."
@@ -210,6 +227,16 @@ function source_py_virtualenv () {
 
    source $HOME/py_envs/$1/bin/activate
 }
+
+function load_docker_env () {
+   if [[ $# -ne 1 ]]; then
+      echo "load_docker_env takes exactly one argument."
+   fi
+
+   eval "$(docker-machine env $1)"
+   PS1="D$1|$PS1"
+}
+
 
 function my-local-history-beginning-search-backward () {
    zle set-local-history 1
