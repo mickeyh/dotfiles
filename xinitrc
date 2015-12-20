@@ -16,5 +16,8 @@ fi
 eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
+# Start notification-daemon.
+/usr/lib/notification-daemon-1.0/notification-daemon &
+
 # Execute window manager.
 dbus-launch --exit-with-session --sh-syntax i3

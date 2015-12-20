@@ -19,6 +19,7 @@ Finally you man want to install (unless you change the corresponding configurati
    1. gnome-keyring (`xinitrc`).
    1. i3status (`i3/config`).
    1. i3-wm (`i3/config`).
+   1. notification-daemon (`xinitrc`).
    1. oh-my-zsh (`zshrc`).
    1. slock (`i3/config`).
    1. terminator (`i3/config`).
