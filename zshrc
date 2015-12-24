@@ -51,21 +51,8 @@ export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
 export GREP_OPTIONS='--color=auto --exclude="*.pyc" --exclude-dir=".bzr" --exclude-dir=".git" --exclude-dir=".hg" --exclude-dir=".svn"'
 export PATH=$HOME/.cabal/bin:$PATH
 
-# Homebrew.
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/sbin:/usr/local/bin:$PATH"
-# Macports.
-export PATH=/opt/local/bin:$PATH
-export PATH=/opt/local/sbin:$PATH
-# PosgreSQL from Macports. WHY DO I HAVE TO PUT THIS HERE.
-export PATH=/opt/local/lib/postgresql93/bin:$PATH
-# Java.
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/"
 # My scripts.
-export PATH=/Users/mgh/bin:$PATH
-# Added by Anaconda 2.1.0 installer.
-export PATH="$HOME/anaconda/bin:$PATH"
-# Haskell
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH=$PATH
 # Go.
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
@@ -323,11 +310,3 @@ bindkey '^N' my-local-history-beginning-search-forward
 bindkey '^U' backward-kill-line
 
 # vim: set ft=zsh ts=3 sw=3 et foldmethod=marker :
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-source "/Users/mgh/google-cloud-sdk/path.zsh.inc"
-source "/Users/mgh/google-cloud-sdk/completion.zsh.inc"
-
-PERL_MB_OPT="--install_base \"/Users/mgh/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/mgh/perl5"; export PERL_MM_OPT;
