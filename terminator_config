@@ -1,8 +1,9 @@
 [global_config]
 borderless=True
-scrollbar_position=disabled
 tab_position=hidden
 
 [profiles]
    [[default]]
       show_titlebar=False
+      scrollback_infinite=True
+      scrollbar_position=Disabled
