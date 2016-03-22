@@ -126,6 +126,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Add gcloud completion if possible. Apparently this has to come after the init of the completion
+# system.
+if [[ -d /opt/google-cloud-sdk/ ]]; then
+   source /opt/google-cloud-sdk/*.zsh.inc
+fi
+
 #-------------------------------------------------------------------------------
 #  Regular widgets and functions. {{{1
 #-------------------------------------------------------------------------------
