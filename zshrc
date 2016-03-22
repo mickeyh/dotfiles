@@ -46,6 +46,7 @@ source $ZSH/oh-my-zsh.sh
 #-------------------------------------------------------------------------------
 
 source /etc/profile
+source /usr/bin/virtualenvwrapper.sh
 
 export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
 export PATH=$HOME/.cabal/bin:$PATH
@@ -64,9 +65,6 @@ export TERM=xterm-256color
 #-------------------------------------------------------------------------------
 
 alias cd=git-cd
-alias p2env=make_clean_py2_virtualenv
-alias p3env=make_clean_py3_virtualenv
-alias lpenv=source_py_virtualenv
 alias ldenv=load_docker_env
 alias vless="/usr/share/vim/vim74/macros/less.sh"
 
@@ -78,28 +76,6 @@ alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sand
 alias dockercleancontainers="docker ps -a --no-trunc| grep 'Exit' | awk '{print \$1}' | xargs -L 1 docker rm"
 alias dockercleanimages="docker images -a --no-trunc | grep none | awk '{print \$3}' | xargs -L 1 docker rmi"
 alias dockerclean="dockercleancontainers && dockercleanimages"
-
-
-#-------------------------------------------------------------------------------
-#  Environment. {{{1
-#-------------------------------------------------------------------------------
-
-source /etc/profile
-source /usr/bin/virtualenvwrapper.sh
-
-# TODO.txt
-alias t="topydo"
-alias ta="topydo add"
-alias tap="topydo append"
-alias td=topydo_do_tag_time
-#alias td="topydo do"
-alias tl="topydo ls"
-alias tlc="topydo listcon"
-alias tlp="topydo listprojects"
-alias tlt="topydo ls +today"
-alias tp="topydo pri"
-alias ts="topydo sort"
-alias tt="topydo tag"
 
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
@@ -169,51 +145,6 @@ function git-cd () {
          builtin cd
       fi
    fi
-}
-
-function topydo_do_tag_time () {
-   if [[ $# -ne 2 ]]; then
-      echo "topydo_do_tag_time takes exactly two argument."
-  else
-       topydo tag "$1" time $2
-       topydo do "$1"
-   fi
-}
-
-function make_clean_py2_virtualenv () {
-   if [[ $# -ne 1 ]]; then
-      echo "make_clean_virtualenv takes exactly one argument."
-   fi
-
-   if hash deactivate 2>/dev/null; then
-      deactivate
-   fi
-
-   rm -rf "$HOME/py_envs/$1"
-   virtualenv --python=$(which python2) "$HOME/py_envs/$1"
-   source "$HOME/py_envs/$1/bin/activate"
-}
-
-function make_clean_py3_virtualenv () {
-   if [[ $# -ne 1 ]]; then
-      echo "make_clean_virtualenv takes exactly one argument."
-   fi
-
-   if hash deactivate 2>/dev/null; then
-      deactivate
-   fi
-
-   rm -rf "$HOME/py_envs/$1"
-   virtualenv --python=$(which python3) "$HOME/py_envs/$1"
-   source "$HOME/py_envs/$1/bin/activate"
-}
-
-function source_py_virtualenv () {
-   if [[ $# -ne 1 ]]; then
-      echo "source_py_virtualenv takes exactly one argument."
-   fi
-
-   source $HOME/py_envs/$1/bin/activate
 }
 
 function load_docker_env () {
