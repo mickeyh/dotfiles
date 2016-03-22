@@ -60,6 +60,12 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # To make Vim respect colorschemes.
 export TERM=xterm-256color
 
+export GOPATH=$HOME/go
+export PATH=$HOME/go/bin:$PATH
+
+export BROWSER=opera
+export EDITOR=vim
+
 #-------------------------------------------------------------------------------
 #  Aliases. {{{1
 #-------------------------------------------------------------------------------
@@ -76,12 +82,6 @@ alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sand
 alias dockercleancontainers="docker ps -a --no-trunc| grep 'Exit' | awk '{print \$1}' | xargs -L 1 docker rm"
 alias dockercleanimages="docker images -a --no-trunc | grep none | awk '{print \$3}' | xargs -L 1 docker rmi"
 alias dockerclean="dockercleancontainers && dockercleanimages"
-
-export GOPATH=$HOME/go
-export PATH=$HOME/go/bin:$PATH
-
-export BROWSER=opera
-export EDITOR=vim
 
 #-------------------------------------------------------------------------------
 #  Completion. {{{1
