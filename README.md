@@ -1,3 +1,5 @@
+# Linux
+
 Some dotfiles.
 
 After cloning you may want to:
@@ -26,3 +28,12 @@ Finally you man want to install (unless you change the corresponding configurati
    1. xorg-xmodmap (`Xmodmap`).
    1. xorg-xinit (`xinitrc`).
    1. python-virtualenvwrapper (`zshrc`).
+
+# OSX
+
+After cloning you may want to:
+    1. Symlink `zshrc` to `~/.zshrc`.
+    1. Symlink `hammerspoon/init.lua` to `~/.hammerspoon/init.lua`.
+
+Finally you man want to install (unless you change the corresponding configuration file):
+    1. oh-my-zsh (`zshrc`).
