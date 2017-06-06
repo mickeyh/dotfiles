@@ -32,6 +32,7 @@ Finally you man want to install (unless you change the corresponding configurati
 # OSX
 
 After cloning you may want to:
+    1. Change the `virtualenv-wrapper` location in `zshrc`.
     1. Symlink `zshrc` to `~/.zshrc`.
     1. Symlink `osx/hammerspoon_init.lua` to `~/.hammerspoon/init.lua`.
     1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys.
@@ -41,3 +42,4 @@ Finally you man want to install (unless you change the corresponding configurati
     1. oh-my-zsh (`zshrc`).
     1. karabiner (`hammerspoon`).
     1. hammerspoon (`hammerspoon`).
+    1. pyenv-virtualenvwrapper (`zshrc`).

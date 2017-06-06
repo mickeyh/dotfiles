@@ -46,6 +46,7 @@ source $ZSH/oh-my-zsh.sh
 #-------------------------------------------------------------------------------
 
 source /etc/profile
+# TODO(OSX): This should be /usr/local/bin/virtualenvwrapper.sh on OSX.
 source /usr/bin/virtualenvwrapper.sh
 
 export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
