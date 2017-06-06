@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+        <name>Remap F19 to Hyper</name>
+        <appendix>OS X doesn't have a Hyper. This maps the F19 signal to Option + Command + Control.</appendix>
+
+        <identifier>space_cadet.capslock_to_hyper</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::F19,
+
+            KeyCode::COMMAND_L,
+            ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+    <item>
+        <name>Remap Alt_L to Hyper</name>
+        <appendix>OS X doesn't have a Hyper. This maps Alt_L to Option + Command + Control.</appendix>
+
+        <identifier>space_cadet.alt_l_to_hyper</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::OPTION_L,
+
+            KeyCode::COMMAND_L,
+            ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+    <item>
+        <name>Remap Command_L to Hyper</name>
+        <appendix>OS X doesn't have a Hyper. This maps Command_L to Option + Command + Control.</appendix>
+
+        <identifier>space_cadet.command_l_to_hyper</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::COMMAND_L,
+
+            KeyCode::COMMAND_L,
+            ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+    <item>
+        <name>Remap Caps Lock to Control_L</name>
+        <appendix>Map Caps Lock to Control_L</appendix>
+
+        <identifier>space_cadet.capslock_to_control_l</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::F19,
+
+            KeyCode::CONTROL_L
+        </autogen>
+    </item>
+    <item>
+        <name>Remap Command to Caps Lock</name>
+        <appendix>Remap Command to Caps Lock</appendix>
+
+        <identifier>space_cadet.command_to_capslock</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::COMMAND_L,
+
+            KeyCode::CAPSLOCK
+        </autogen>
+    </item>
+</root>

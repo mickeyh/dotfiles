@@ -33,7 +33,11 @@ Finally you man want to install (unless you change the corresponding configurati
 
 After cloning you may want to:
     1. Symlink `zshrc` to `~/.zshrc`.
-    1. Symlink `hammerspoon/init.lua` to `~/.hammerspoon/init.lua`.
+    1. Symlink `osx/hammerspoon_init.lua` to `~/.hammerspoon/init.lua`.
+    1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys.
+    1. Load `osx/karabiner_private.xml` into Karabiner. Check the "Remap Command_L to Hyper" custom rule.
 
 Finally you man want to install (unless you change the corresponding configuration file):
     1. oh-my-zsh (`zshrc`).
+    1. karabiner (`hammerspoon`).
+    1. hammerspoon (`hammerspoon`).
