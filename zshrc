@@ -52,12 +52,18 @@ source /usr/bin/virtualenvwrapper.sh
 export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
 export PATH=$HOME/.cabal/bin:$PATH
 
+# Bazel needs Python2.
+export BAZEL_PYTHON=/usr/bin/python2
+
 # My scripts.
 export PATH=$PATH
 # Go.
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+# Cuda.
+#export PATH=/opt/cuda/bin${PATH:+:${PATH}}
+#export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 # To make Vim respect colorschemes.
 export TERM=xterm-256color
 
