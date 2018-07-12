@@ -192,21 +192,11 @@ client.unfocused        #393939 #393939 #dcdccc #3f3f3f
 client.urgent           #3f3f3f #2f2f2f #80d4aa #3f3f3f
 client.background       #3f3f3f
 
-# Bind workspaces to left/right monitors.
-# TODO: Bind monitors. For example with `workspace 1 output eDP1`
-
 # Lock screen with slock.
 bindsym $mod+Shift+semicolon exec i3lock
 
 # Web browser hotkeys.
-bindsym $mod+b exec firefox --private-window
-bindsym $mod+Shift+B exec opera
-
-# Mail client hotkeys.
-bindsym $mod+Shift+N exec thunderbird
-
-# Open todo list.
-bindsym $mod+t exec gvim -O ~/notes/todo_extended.txt ~/notes/todo.txt
+bindsym $mod+b exec firefox
 
 # TODO: Bind other applications.
 
