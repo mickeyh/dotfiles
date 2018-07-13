@@ -41,7 +41,6 @@ plugins=(
     golang
     tig
     tmux
-    ubuntu
     vscode
 )
 
@@ -232,5 +231,12 @@ bindkey '^N' my-local-history-beginning-search-forward
 
 # Bash-like ^U.
 bindkey '^U' backward-kill-line
+
+#-------------------------------------------------------------------------------
+#  Services. {{{1
+#-------------------------------------------------------------------------------
+
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
 # vim: set ft=zsh ts=4 sw=4 et foldmethod=marker :

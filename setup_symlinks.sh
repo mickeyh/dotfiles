@@ -19,14 +19,12 @@ safe_rm() {
 # Remove dotfiles so we can later overwrite them.
 safe_rm ~/.gtkrc-2.0
 safe_rm ~/.i3
-safe_rm ~/.xinitrc
 safe_rm ~/.zshrc
 safe_rm ~/.config/terminator/config
 
 # Make symlinks.
 ln -s "$DOTFILESDIR/gtkrc-2.0" ~/.gtkrc-2.0
 ln -s "$DOTFILESDIR/i3" ~/.i3
-ln -s "$DOTFILESDIR/xinitrc" ~/.xinitrc
 ln -s "$DOTFILESDIR/zshrc" ~/.zshrc
 mkdir -p ~/.config/terminator
 ln -s "$DOTFILESDIR/terminator_config" ~/.config/terminator/config
