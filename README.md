@@ -23,8 +23,8 @@ Finally you may want to manually install:
 
 After cloning you may want to:
 
+    1. Install Karabiner-Elements and copy `osx/karabiner.json` into the root of Karabiner's config folder. Check the "Remap Command_L to Hyper" custom rule.
     1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys.
-    1. Load `osx/karabiner_private.xml` into Karabiner. Check the "Remap Command_L to Hyper" custom rule.
     1. Set up spaces.
         1. Uncheck "Automatically rearrange..." in System Preferences > Mission Control.
         1. Create 10 total workspaces (press Control + Up to open Mission Control, then add them).
@@ -35,6 +35,6 @@ After cloning you may want to:
 
 Finally you man want to install (unless you change the corresponding configuration file):
     1. oh-my-zsh (`zshrc`).
-    1. karabiner (or karabiner-elements, version from PR 170 on OSX Sierra+) (`hammerspoon`).
+    1. karabiner-elements (`hammerspoon`).
     1. hammerspoon (`hammerspoon`).
     1. pyenv-virtualenvwrapper (`zshrc`).
