@@ -23,7 +23,7 @@ Finally you may want to manually install:
 
 After cloning you may want to:
 
-   1. Install Karabiner-Elements and copy `osx/karabiner.json` into the root of Karabiner's config folder. Check the "Remap Command_L to Hyper" custom rule.
+   1. Install Karabiner-Elements and copy `osx/karabiner.json` into the root of Karabiner's config folder. Check the "Change left_command to command+control+option+shift" "complex modification" is enabled.
    1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys.
    1. Set up spaces.
        1. Uncheck "Automatically rearrange..." in System Preferences > Mission Control.
