@@ -15,26 +15,27 @@ After setup you may want to:
 Finally you may want to manually install:
 
    1. firefox plugins.
-      1. startpage.
-      1. tridactyl.
-      1. multi-account containers.
+   1. startpage.
+   1. tridactyl.
+   1. multi-account containers.
 
 # OSX
 
 After cloning you may want to:
 
-    1. Install Karabiner-Elements and copy `osx/karabiner.json` into the root of Karabiner's config folder. Check the "Remap Command_L to Hyper" custom rule.
-    1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys.
-    1. Set up spaces.
-        1. Uncheck "Automatically rearrange..." in System Preferences > Mission Control.
-        1. Create 10 total workspaces (press Control + Up to open Mission Control, then add them).
-        1. In System Preferences > Keyboard > Shortcuts assign the right shortcuts for each workspace.
-    1. Change the `virtualenv-wrapper` location in `zshrc`.
-    1. Symlink `zshrc` to `~/.zshrc`.
-    1. Symlink `osx/hammerspoon_init.lua` to `~/.hammerspoon/init.lua`.
+   1. Install Karabiner-Elements and copy `osx/karabiner.json` into the root of Karabiner's config folder. Check the "Remap Command_L to Hyper" custom rule.
+   1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys.
+   1. Set up spaces.
+       1. Uncheck "Automatically rearrange..." in System Preferences > Mission Control.
+       1. Create 10 total workspaces (press Control + Up to open Mission Control, then add them).
+       1. In System Preferences > Keyboard > Shortcuts assign the right shortcuts for each workspace.
+   1. Change the `virtualenv-wrapper` location in `zshrc`.
+   1. Symlink `zshrc` to `~/.zshrc`.
+   1. Symlink `osx/hammerspoon_init.lua` to `~/.hammerspoon/init.lua`.
 
 Finally you man want to install (unless you change the corresponding configuration file):
-    1. oh-my-zsh (`zshrc`).
-    1. karabiner-elements (`hammerspoon`).
-    1. hammerspoon (`hammerspoon`).
-    1. pyenv-virtualenvwrapper (`zshrc`).
+
+   1. oh-my-zsh (`zshrc`).
+   1. karabiner-elements (`hammerspoon`).
+   1. hammerspoon (`hammerspoon`).
+   1. pyenv-virtualenvwrapper (`zshrc`).
