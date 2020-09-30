@@ -23,12 +23,13 @@ Finally you may want to manually install:
 
 After cloning you may want to:
 
-   1. Install Karabiner-Elements and copy `osx/karabiner.json` into the root of Karabiner's config folder. Check the "Change left_command to command+control+option+shift" "complex modification" is enabled.
-   1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys.
+   1. Switch the Control and Capslock keys in System Preferences > Keyboard > Modifier keys (for Apple Internal Keyboard / Trackpad, NOT Karabiner VirtualHIDKeyboard).
+   1. Install Karabiner-Elements and copy `osx/karabiner.json` into the root of Karabiner's config folder. Check the "Change left_command to command+control+option" "complex modification" is enabled.
    1. Set up spaces.
        1. Uncheck "Automatically rearrange..." in System Preferences > Mission Control.
        1. Create 10 total workspaces (press Control + Up to open Mission Control, then add them).
        1. In System Preferences > Keyboard > Shortcuts assign the right shortcuts for each workspace.
+   1. In System Preferences > Keyboard > Shortcuts > Spotlight, set the spotlight search key to Hyper+D.
    1. Change the `virtualenv-wrapper` location in `zshrc`.
    1. Symlink `zshrc` to `~/.zshrc`.
    1. Symlink `osx/hammerspoon_init.lua` to `~/.hammerspoon/init.lua`.
