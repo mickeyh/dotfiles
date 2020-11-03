@@ -1,0 +1,16 @@
+* Linux configuration, intended for use with i3wm.
+* Config also works OK with Windows (maybe someday I'll improve it). 
+
+* Swap Esc and CapsLock for Vim.
+[escape]>[caps]
+[caps]>[escape]
+
+* Left Mod/Win to inner thumb; backspace to delete; delete is orphaned.
+[delete]>[bspace]
+[bspace]>[lwin]
+
+* Page Up/Down are shifted up by one; left Alt overwrites Page Down.
+* This (combined with above) orphans left Ctrl but offers easy access to Alt.
+[pdown]>[lalt]
+[pup]>[pdown]
+[rwin]>[pup]

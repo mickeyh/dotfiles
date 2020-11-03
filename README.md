@@ -40,3 +40,7 @@ Finally you man want to install (unless you change the corresponding configurati
    1. karabiner-elements (`hammerspoon`).
    1. hammerspoon (`hammerspoon`).
    1. pyenv-virtualenvwrapper (`zshrc`).
+
+# Kinesis Advantage
+
+Two keyboard layouts are backed up in the `kinesis` directory.

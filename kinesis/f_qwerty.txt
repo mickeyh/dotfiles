@@ -1,0 +1,19 @@
+* OSX configuration, intended for use with Karabiner-Elements (to create Hyper)
+* and Hammerspoon (to maniuplate windows).
+
+* Swap Esc and CapsLock for Vim.
+[escape]>[caps]
+[caps]>[escape]
+
+* Left Cmd/Win to inner thumb; backspace to delete; delete is orphaned.
+[delete]>[bspace]
+[bspace]>[lwin]
+
+* Right Cmd/Win to right Ctrl since it's the dominant OS modifer key.
+[rctrl]>[rwin]
+
+* Page Up/Down are shifted up by one; left Alt overwrites Page Down.
+* This (combined with above) orphans left Ctrl but offers easy access to Alt.
+[pdown]>[lalt]
+[pup]>[pdown]
+[rwin]>[pup]
