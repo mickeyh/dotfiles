@@ -1,0 +1,48 @@
+{
+    // Vim
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<C-w>",
+                "<C-h>"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<C-w>",
+                "<C-l>"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "g",
+                "]"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.goToTypeDefinition",
+                }
+            ]
+        },
+    ],
+    // Tools.
+    "bazel.executable": "bazelisk",
+    // Editor properties (should probably use EditorConfig, but I can't get it working).
+    "editor.tabSize": 2,
+    "editor.lineNumbers": "on",
+    "files.trimTrailingWhitespace": true,
+    // VSCode tweaks
+    "editor.fontSize": 12,
+    "files.autoSave": "onFocusChange",
+    "telemetry.telemetryLevel": "off",
+    // Allow breakpoints even in e.g. Rust source files.
+    "debug.allowBreakpointsEverywhere": true,
+}
